@@ -88,5 +88,46 @@ public class Main
 
         }
 
+        System.out.println("Podaj liczbe rok");
+        int rok= scanner.nextInt();
+        if(rok%4==0 && rok%100!=0){
+            System.out.println("Rok przestępny");
+        }
+        else if (rok%400==0 && rok%4==0) {
+            System.out.println("Rok przestępny");
+        }
+        else{
+            System.out.println("Rok nie przestępny");
+        }
+
+//Napisz program sprawdzający czy podane liczby z klawiatury mogą stanowić poprawna godzinę w formacie 24-godzinnym.
+Przykładowe wejście:
+Podaj godzinę: 22
+Podaj minuty: 12
+Podaj sekundy: 33
+Przykładowe wyjście:
+Poprawna godzina!
+/////////////////
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbe godzine");
+        int godzina= scanner.nextInt();
+        System.out.println("Podaj minute godzine");
+        int minuta= scanner.nextInt();
+        System.out.println("Podaj sekunde godzine");
+        int sekunda= scanner.nextInt();
+        if(godzina<24 && minuta<60 && sekunda<60){
+            System.out.println("Poprawna godzina!");
+        }
+        else{
+            System.out.println("Błędna godzina :(((");
+        }
+    }
+}
+        
+
     }
 }
