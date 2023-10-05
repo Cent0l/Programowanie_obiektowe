@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("podaj pierwsza liczbe"); //sout, souf + tab :D
+        double liczba1=scanner.nextDouble(); //otrzymywanie dabla;
+        System.out.println("podaj druga liczbe");
+        double liczba2=scanner.nextDouble();
+        System.out.println("dodawanie " +(liczba1+liczba2));
+        System.out.println("odejmowanie " +(liczba1-liczba2));
+        System.out.println("mnozenie " +(liczba1*liczba2));
+        System.out.println("dodawanie " + (liczba1 / liczba2));
+
+        //stringi
+        System.out.println("podaj 2 stringi");
+        String str1 = scanner.next();
+        String str2 = scanner.next();
+        System.out.println(str1);
+        System.out.println(str2);
+
+        //cztery wymierne
+        System.out.println("podaj pierwsza liczbe"); //sout, souf + tab :D
+        double a=scanner.nextDouble(); //otrzymywanie dabla;
+        System.out.println("podaj druga liczbe");
+        double b=scanner.nextDouble();
+        System.out.println("podaj trzecia liczbe"); //sout, souf + tab :D
+        double c=scanner.nextDouble(); //otrzymywanie dabla;
+        System.out.println("podaj czwarta liczbe");
+        double d=scanner.nextDouble();
+        System.out.println(a+b+c+d);
+
+        //kwadrat
+        System.out.println("podaj bok");
+        double aa=scanner.nextDouble();
+        System.out.println(aa*aa);
+
+     
+
+        //3 liczby i zwraca najwieksza
+        int e = scanner.nextInt();
+        int f = scanner.nextInt();
+        int g = scanner.nextInt();
+        int max;
+        if (e > f)
+        {
+            max = e;
+        }
+        else
+        {
+            max = f;
+        }
+        if(max<g)
+        {
+            max=g;
+        }
+        System.out.println("max="+ max);
+
+    }
+}
