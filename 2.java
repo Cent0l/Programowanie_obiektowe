@@ -21,7 +21,8 @@ public class Main
         //Collection
         ReverseTab();
         System.out.println(TabAvg());
-        //Piramida();
+        //Piramida()
+        MinMax();
 
 
     }
@@ -63,14 +64,15 @@ public class Main
         }
         return Arrays.stream(tab).average().getAsDouble();
     }
-    public static double MinMax()
+    public static void MinMax()
     {
-        double[] tab=new double[15];
+        int[] tab=new int[15];
         for (int i=0;i<15;i++)
         {
             tab[i]=random.nextInt(1,100);
         }
-        return Arrays.stream(tab).average().getAsDouble();
+        System.out.println(Arrays.stream(tab).min().getAsInt());
+        System.out.println(Arrays.stream(tab).max().getAsInt());
         //ma obliczyc cymbale ale tu se machnij tak
     }
     public static void Piramida()
