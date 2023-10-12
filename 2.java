@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.*;
 //import java.util.*; importuje wszystko
 
 public class Main
@@ -114,6 +115,29 @@ public class Main
         }
         System.out.println(sb.toString());
     }
-
-   
+    public static void reverseString()
+    {
+        System.out.println("Podaj słowo: ");
+        Scanner scanner = new Scanner(System.in);
+        String slowo = scanner.next();
+        StringBuilder sb=new StringBuilder();
+        sb.append(slowo);
+        sb.reverse();
+        System.out.println(sb.toString());
+    }
+    public static void lista()
+    {
+        ArrayList<Integer> liczby = new ArrayList<>();
+        for(int i=0;i<15;i++){
+            liczby.add(random.nextInt(0,50));
+        }
+        System.out.println(liczby);
+        for(int j=14;j>=0;j--){
+            System.out.println(liczby.get(j));
+        }
+    }
+    //Napisz program, który tworzy listę tablicową 10 liczb zmiennoprzecinkowych, a następnie oblicza i wyświetla ich sumę.
+    public static void lista10(){
+        ArrayList<Integer> liczby = new ArrayList<>();
+    }
 }
