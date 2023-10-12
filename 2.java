@@ -23,6 +23,7 @@ public class Main
         System.out.println(TabAvg());
         //Piramida()
         MinMax();
+        DelRep();
 
 
     }
@@ -100,4 +101,19 @@ public class Main
         }
     }
 
+    public static void DelRep(){
+        String napis = "banannowy";
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<napis.length();i++)
+        {
+            char currentChar = napis.charAt(i);
+            if(sb.indexOf(String.valueOf(currentChar))==-1)
+            {
+                sb.append(currentChar);
+            }
+        }
+        System.out.println(sb.toString());
+    }
+
+   
 }
