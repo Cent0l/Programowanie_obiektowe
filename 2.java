@@ -73,7 +73,7 @@ public class Main
         }
         System.out.println(Arrays.stream(tab).min().getAsInt());
         System.out.println(Arrays.stream(tab).max().getAsInt());
-        //ma obliczyc cymbale ale tu se machnij tak
+
     }
     public static void Piramida()
     {
