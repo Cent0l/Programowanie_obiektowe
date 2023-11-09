@@ -1,0 +1,16 @@
+public class Pojazd
+{
+    public void jedz()
+    {
+        System.out.println("pojazd jedzie");
+    }
+}
+class Samochod extends Pojazd
+{
+    @Override
+    public void jedz()
+    {
+        super.jedz();
+        System.out.println("pojazd jedzie ale szybciej");
+    }
+}
