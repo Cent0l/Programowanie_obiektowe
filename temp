@@ -1,0 +1,94 @@
+import java.util.Comparator;
+
+public class Osoba implements Comparable<Osoba>
+{
+    String name;
+    double height;
+    int age;
+
+    public Osoba(String name, double height, int age)
+    {
+        this.name = name;
+        this.height = height;
+        this.age = age;
+    }
+
+    public Osoba(double height)
+    {
+        this.height = height;
+    }
+
+    public Osoba(int age)
+    {
+        this.age = age;
+    }
+
+    public Osoba(double height, int age)
+    {
+        this.height = height;
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return height+" "+age;
+    }
+
+    @Override
+    public int compareTo(Osoba o)
+    {
+        if(Double.compare(o.height,this.height)==0)//porownuje, mozna samemu zrobic 3 ify
+            return Integer.compare(o.age,this.age);
+        return Double.compare(o.height,this.height);
+
+
+        //return (int) Math.signum(o.height-this.height)
+    }
+}
+class OsobaHeightComparator implements Comparator<Osoba>
+{
+    @Override
+    public int compare(Osoba o1, Osoba o2) {
+        return Double.compare(o2.height, o1.height);
+    }
+}
+class OsobaAgeComparator implements Comparator<Osoba>
+{
+    @Override
+    public int compare(Osoba o1, Osoba o2) {
+        return Integer.compare(o2.age, o1.age);
+    }
+}
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Osoba>osobalist = new ArrayList<>();
+        osobalist.add(new Osoba(156.3,13));
+        osobalist.add(new Osoba(171.8,17));
+        osobalist.add(new Osoba(171.8,19));
+        osobalist.add(new Osoba(180.2,21));
+        osobalist.add(new Osoba(169.4,50));
+        osobalist.add(new Osoba(201.3,42));
+
+        ArrayList<Osoba>osobaaa = new ArrayList<>();
+        osobaaa.add(new Osoba(156.3,13));
+        osobaaa.add(new Osoba(171.8,17));
+        osobaaa.add(new Osoba(171.8,19));
+        osobaaa.add(new Osoba(180.2,21));
+        osobaaa.add(new Osoba(169.4,50));
+        osobaaa.add(new Osoba(201.3,42));
+
+
+        Collections.sort(osobalist, new OsobaHeightComparator());
+        System.out.println(osobalist);
+        Collections.sort(osobaaa,new OsobaAgeComparator().reversed());
+        System.out.println(osobaaa);
+    }
+}
+
